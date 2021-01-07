@@ -1,5 +1,5 @@
 // |****************************************|
-// |				EJERCICIO 7				|
+// |		   EJERCICIO 7              |
 // |****************************************|
 package main
 
@@ -37,12 +37,15 @@ func gen(ctx context.Context) <-chan int {
 	for i := 0; i < numOfGoRoutines; i++ {
 		go func() {
 			for {
+				mu.Lock()
 				select {
 				case <-ctx.Done():
+					mu.Unlock()
 					return
 				case c1 <- n:
 					n++
 				}
+				mu.Unlock()
 			}
 		}()
 	}
