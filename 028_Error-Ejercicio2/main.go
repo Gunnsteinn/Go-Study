@@ -33,6 +33,7 @@ func main() {
 	}
 	fmt.Println(string(bj))
 
+	// Json to Struct
 	bs, errs := aSTRUCT(bj)
 	if errs != nil {
 		log.Fatalln(errj)
@@ -43,7 +44,7 @@ func main() {
 func aJSON(aux person) ([]byte, error) {
 	bs, err := json.Marshal(aux)
 	if err != nil {
-		return []byte{}, fmt.Errorf("Error:  %v", err)
+		return []byte{}, fmt.Errorf("Error marshalling  %v in aJSON: %v", bs, err)
 	}
 	return bs, nil
 }

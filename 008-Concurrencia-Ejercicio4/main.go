@@ -1,5 +1,5 @@
 // |****************************************|
-// |				EJERCICIO 4				|
+// |				EJERCICIO 4_fmt-errorf_var				|
 // |****************************************|
 //	Arregla la race condition que creaste en el ejercicio anterior usando un mutex
 //		● Tiene sentido eliminar runtime.Gosched(), porque en este caso si vamos a bloquear la

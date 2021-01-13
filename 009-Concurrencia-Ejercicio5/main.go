@@ -1,7 +1,7 @@
 // |****************************************|
-// |				EJERCICIO 4				|
+// |				EJERCICIO 4_fmt-errorf_var				|
 // |****************************************|
-//	Arreglar la race condition que creaste en el ejercicio #4 usando el paquete atomic
+//	Arreglar la race condition que creaste en el ejercicio #4_fmt-errorf_var usando el paquete atomic
 package main
 
 import (

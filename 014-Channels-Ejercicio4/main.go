@@ -1,5 +1,5 @@
 // |****************************************|
-// |				EJERCICIO 4				|
+// |				EJERCICIO 4_fmt-errorf_var				|
 // |****************************************|
 // Comenzando con este código , extrae los valores del canal usando una declaración
 //select

@@ -2,7 +2,6 @@
 // |				EJERCICIO 1				|
 // |****************************************|
 // Simple ejercicio donde se explica log.Fatalln().
-
 package main
 
 import (

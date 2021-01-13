@@ -1,5 +1,5 @@
 // |****************************************|
-// |		   EJERCICIO 7              |
+// |				EJERCICIO 7				|
 // |****************************************|
 package main
 
@@ -7,6 +7,7 @@ import (
 	"context"
 	"fmt"
 	"runtime"
+	"sync"
 	"time"
 )
 
@@ -32,7 +33,7 @@ func gen(ctx context.Context) <-chan int {
 	c1 := make(chan int)
 	n := 0
 	const numOfGoRoutines = 10
-
+	var mu sync.Mutex
 
 	for i := 0; i < numOfGoRoutines; i++ {
 		go func() {
