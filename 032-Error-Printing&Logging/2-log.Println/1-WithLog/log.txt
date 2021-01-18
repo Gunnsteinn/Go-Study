@@ -1,2 +1,0 @@
-2021/01/11 17:12:41 un error ocurrió open sin-archivo.txt: El sistema no puede encontrar el archivo especificado.
-2021/01/11 17:12:41 un error ocurrió open sin-archivo.txt: El sistema no puede encontrar el archivo especificado.
