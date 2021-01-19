@@ -6,7 +6,7 @@ package main
 import (
 
 	"fmt"
-	"github.com/Go-Study/awesomeProject/035-Documentation-GoDoc/mathme"
+	"github.com/Gunnsteinn/Go-Study/awesomeProject/035-Documentation-GoDoc/mathme"
 )
 
 func main() {

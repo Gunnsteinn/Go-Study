@@ -8,7 +8,7 @@ package main
 
 import (
 	"fmt"
-	humanagetodogage "github.com/Go-Study/awesomeProject/036-Documentation-Ejercicio1/humanAgeToDogAge"
+	"github.com/Gunnsteinn/Go-Study/awesomeProject/036-Documentation-Ejercicio1/humanAgeToDogAge"
 )
 
 var humanAge = 10

@@ -5,7 +5,7 @@ package main
 
 import (
 	"fmt"
-	trigonometric "github.com/Go-Study/awesomeProject/040-TestingAndBenchmarking-Benchmark/trigonometricFunctions"
+	"github.com/Gunnsteinn/Go-Study/awesomeProject/040-TestingAndBenchmarking-Benchmark/trigonometricFunctions"
 )
 
 func main() {

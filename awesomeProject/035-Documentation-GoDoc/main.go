@@ -7,7 +7,7 @@ Corre como un servidor web y presenta la documentación como una página web
 package main
 
 import (
-	"github.com/Go-Study/awesomeProject/035-Documentation-GoDoc/mathme"
+	"github.com/Gunnsteinn/Go-Study/awesomeProject/035-Documentation-GoDoc/mathme"
 
 	"fmt"
 )
