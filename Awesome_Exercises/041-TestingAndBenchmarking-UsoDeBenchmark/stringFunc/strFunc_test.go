@@ -83,66 +83,66 @@ var textArrayExamples = []textArrayExample{
 	{[]string{"Why", "would", "you", "have", "a", "language", "that", "is", "not", "theoretically", "exciting?", "Because", "it's", "very", "useful."}, 91},
 }
 
-func TestCustomSpiltWordByWord(t *testing.T) {
-	for _, value := range textExamples {
-		got := CustomSpiltWordByWord(value.Phrases)
-		if len(got) != value.Expected {
-			t.Errorf("got %v expected %v", len(got), value.Expected)
-		}
-	}
-}
-
-func ExampleCustomSpiltWordByWord() {
-	// >>> {"There's nothing in computing that can't be broken by another level of indirection."}
-	// >>> {"Sockets are the X windows of IO interfaces."}
-	// >>> {"There's no such thing as a simple cache bug."}
-	// >>> {"Caches aren't architecture, they're just optimization."}
-	// >>> {"Languages that try to disallow idiocy become themselves idiotic."}
-	// >>> {"Such is modern computing: everything simple is made too complicated because it's easy to fiddle with; everything complicated stays complicated because it's hard to fix."}
-	// >>> {"When there is no type hierarchy you don't have to manage the type hierarchy."}
-	// >>> {"A smart terminal is not a smartass terminal, but rather a terminal you can educate."}
-	// >>> {"Not only is UNIX dead, it's starting to smell really bad."}
-	// >>> {"Rule 1. You can't tell where a program is going to spend its time. Bottlenecks occur in surprising places, so don't try to second guess and put in a speed hack until you've proven that's where the bottleneck is"}
-	// >>> {"Procedure names should reflect what they do; function names should reflect what they return"}
-	// >>> {"If POSIX threads are a good thing, perhaps I don't want to know what they're better than."}
-	// >>> {"Narrowness of experience leads to narrowness of imagination"}
-	// >>> {"Data dominates. If you've chosen the right data structures and organized things well, the algorithms will almost always be self-evident. Data structures, not algorithms, are central to programming."}
-	// >>> {"Object-oriented design is the roman numerals of computing."}
-	// >>> {"Eventually, I decided that thinking was not getting me very far and it was time to try building."}
-	// >>> {"Using Unix is the computing equivalent of listening only to music by David Cassidy."}
-	// >>> {"Why would you have a language that is not theoretically exciting? Because it's very useful."}
-
-	for _, value := range textExamples {
-		fmt.Println(len(CustomSpiltWordByWord(value.Phrases)))
-	}
-	//Output:
-	// 13
-	// 8
-	// 9
-	// 6
-	// 9
-	// 25
-	// 14
-	// 15
-	// 11
-	// 39
-	// 14
-	// 17
-	// 8
-	// 28
-	// 8
-	// 18
-	// 14
-	// 15
-}
-
-func BenchmarkCustomSpiltWordByWord(b *testing.B) {
-	for i := 0; i < b.N; i++ {
-		for _, value := range textExamples {
-			CustomSpiltWordByWord(value.Phrases)
-		}
-	}
-}
+//func TestCustomSpiltWordByWord(t *testing.T) {
+//	for _, value := range textExamples {
+//		got := CustomSpiltWordByWord(value.Phrases)
+//		if len(got) != value.Expected {
+//			t.Errorf("got %v expected %v", len(got), value.Expected)
+//		}
+//	}
+//}
+//
+//func ExampleCustomSpiltWordByWord() {
+//	// >>> {"There's nothing in computing that can't be broken by another level of indirection."}
+//	// >>> {"Sockets are the X windows of IO interfaces."}
+//	// >>> {"There's no such thing as a simple cache bug."}
+//	// >>> {"Caches aren't architecture, they're just optimization."}
+//	// >>> {"Languages that try to disallow idiocy become themselves idiotic."}
+//	// >>> {"Such is modern computing: everything simple is made too complicated because it's easy to fiddle with; everything complicated stays complicated because it's hard to fix."}
+//	// >>> {"When there is no type hierarchy you don't have to manage the type hierarchy."}
+//	// >>> {"A smart terminal is not a smartass terminal, but rather a terminal you can educate."}
+//	// >>> {"Not only is UNIX dead, it's starting to smell really bad."}
+//	// >>> {"Rule 1. You can't tell where a program is going to spend its time. Bottlenecks occur in surprising places, so don't try to second guess and put in a speed hack until you've proven that's where the bottleneck is"}
+//	// >>> {"Procedure names should reflect what they do; function names should reflect what they return"}
+//	// >>> {"If POSIX threads are a good thing, perhaps I don't want to know what they're better than."}
+//	// >>> {"Narrowness of experience leads to narrowness of imagination"}
+//	// >>> {"Data dominates. If you've chosen the right data structures and organized things well, the algorithms will almost always be self-evident. Data structures, not algorithms, are central to programming."}
+//	// >>> {"Object-oriented design is the roman numerals of computing."}
+//	// >>> {"Eventually, I decided that thinking was not getting me very far and it was time to try building."}
+//	// >>> {"Using Unix is the computing equivalent of listening only to music by David Cassidy."}
+//	// >>> {"Why would you have a language that is not theoretically exciting? Because it's very useful."}
+//
+//	for _, value := range textExamples {
+//		fmt.Println(len(CustomSpiltWordByWord(value.Phrases)))
+//	}
+//	//Output:
+//	// 13
+//	// 8
+//	// 9
+//	// 6
+//	// 9
+//	// 25
+//	// 14
+//	// 15
+//	// 11
+//	// 39
+//	// 14
+//	// 17
+//	// 8
+//	// 28
+//	// 8
+//	// 18
+//	// 14
+//	// 15
+//}
+//
+//func BenchmarkCustomSpiltWordByWord(b *testing.B) {
+//	for i := 0; i < b.N; i++ {
+//		for _, value := range textExamples {
+//			CustomSpiltWordByWord(value.Phrases)
+//		}
+//	}
+//}
 
 func TestNativeSpilt(t *testing.T) {
 	for _, value := range textExamples {

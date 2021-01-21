@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+// Ping func monitors the status of your application.
 func Ping(c *gin.Context) {
 	c.String(http.StatusOK, "pong")
 }

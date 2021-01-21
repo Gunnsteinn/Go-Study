@@ -6,7 +6,7 @@ Given a coverage profile produced by 'go test':
         go test -coverprofile=c.out
 
 Open a web browser displaying annotated source code:
-        go tool cover -html=c.out
+
 
 Write out an HTML file instead of launching a web browser:
         go tool cover -html=c.out -o coverage.html

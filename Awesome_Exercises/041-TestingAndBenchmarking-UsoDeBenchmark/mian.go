@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/Gunnsteinn/Go-Study/awesomeProject/041-TestingAndBenchmarking-UsoDeBenchmark/stringFunc"
+	"github.com/Gunnsteinn/Go-Study/Awesome_Exercises/041-TestingAndBenchmarking-UsoDeBenchmark/stringFunc"
 )
 
 const s = `Rule 1: You can't tell where a program is going to spend its time. 
