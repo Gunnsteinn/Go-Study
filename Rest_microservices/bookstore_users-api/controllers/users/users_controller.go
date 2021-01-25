@@ -32,7 +32,7 @@ func Create(c *gin.Context) {
 		c.JSON(saveErr.Status, saveErr)
 		return
 	}
-	c.JSON(http.StatusCreated, result)
+	c.JSON(http.StatusCreated, result.Marshall(c.GetHeader("X-Public") == "true"))
 }
 
 // Get get an existing user.
@@ -48,10 +48,10 @@ func Get(c *gin.Context) {
 		c.JSON(getErr.Status, getErr)
 		return
 	}
-	c.JSON(http.StatusOK, user)
+	c.JSON(http.StatusOK, user.Marshall(c.GetHeader("X-Public") == "true"))
 }
 
-// Update update a exist user.
+// Update update an exist user.
 func Update(c *gin.Context) {
 	userID, idErr := getUserId(c.Param("user_id"))
 	if idErr != nil {
@@ -76,10 +76,10 @@ func Update(c *gin.Context) {
 		c.JSON(updateErr.Status, updateErr)
 		return
 	}
-	c.JSON(http.StatusOK, result)
+	c.JSON(http.StatusOK, result.Marshall(c.GetHeader("X-Public") == "true"))
 }
 
-// Delete delete a exist user.
+// Delete delete an exist user.
 func Delete(c *gin.Context) {
 	userID, idErr := getUserId(c.Param("user_id"))
 	if idErr != nil {
@@ -92,4 +92,16 @@ func Delete(c *gin.Context) {
 		return
 	}
 	c.JSON(http.StatusOK, map[string]string{"status": "deleted"})
+}
+
+// Search find all the user by status
+func Search(c *gin.Context) {
+	status := c.Query("status")
+
+	users, searchErr := services.Search(status)
+	if searchErr != nil {
+		c.JSON(searchErr.Status, searchErr)
+		return
+	}
+	c.JSON(http.StatusOK, users.Marshall(c.GetHeader("X-Public") == "true"))
 }

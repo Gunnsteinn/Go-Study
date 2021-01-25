@@ -6,6 +6,10 @@ import (
 	"strings"
 )
 
+const (
+	StatusActive = "active"
+)
+
 // User is a struct to define the common rest api user.
 type User struct {
 	ID          int64  `json:"id"`
@@ -14,8 +18,10 @@ type User struct {
 	Email       string `json:"email"`
 	DateCreated string `json:"date_created"`
 	Status      string `json:"status"`
-	Password    string `json:"-"`
+	Password    string `json:"password"`
 }
+
+type Users []User
 
 // Validate method implements User struct and validate if the email is OK.
 func (user *User) Validate() *errors.RestErr {
@@ -25,6 +31,11 @@ func (user *User) Validate() *errors.RestErr {
 	user.Email = strings.TrimSpace(strings.ToLower(user.Email))
 	if user.Email == "" {
 		return errors.NewBadRequestError("invalid email address.")
+	}
+
+	user.Password = strings.TrimSpace(user.Password)
+	if user.Password == "" {
+		return errors.NewBadRequestError("invalid password.")
 	}
 	return nil
 }
