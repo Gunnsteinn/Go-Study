@@ -1,0 +1,6 @@
+{
+    "go.toolsGopath": "",
+    "gopls": {
+        "build.experimentalWorkspaceModule": true,
+    }
+}
